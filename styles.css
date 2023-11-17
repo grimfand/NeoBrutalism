@@ -176,11 +176,13 @@ h2 {
 	background-color: rgb(253, 55, 177);
 	border-radius: 10vmax;
 	box-shadow: 2px 2px;
+	padding: 1rem;
 }
 
 .personal-bests ul li:hover {
 	background-color: rgb(253, 106, 197);
 	box-shadow: 5px 5px;
+	cursor: default;
 }
 
 .challenges {
@@ -199,34 +201,13 @@ h2 {
 	background-color: rgb(229, 255, 0);
 	border-radius: 10vmax;
 	box-shadow: 2px 2px;
+	padding: 1rem;
 }
 
 .challenges ul li:hover {
 	background-color: rgb(239, 255, 93);
 	box-shadow: 5px 5px;
-}
-
-.activity-feed {
-	background-color: var(--clr-black-300);
-	margin-bottom: 1rem;
-}
-
-.activity-feed ul {
-	display: flex;
-	flex-direction: column;
-}
-
-.activity-feed ul li {
-	background: rgb(0, 204, 255);
-	border-radius: 10vmax;
-	max-width: fit-content;
-	box-shadow: 2px 2px;
-	font-size: 1rem;
-}
-
-.activity-feed ul li:hover {
-	background: rgb(73, 219, 255);
-	box-shadow: 5px 5px;
+	cursor: default;
 }
 
 .calories {
@@ -253,6 +234,7 @@ h2 {
 
 .card:hover {
 	box-shadow: 15px 15px;
+	cursor: default;
 }
 
 .card h2 {
@@ -288,6 +270,7 @@ th {
 
 tr:hover {
 	background: var(--clr-black-400);
+	cursor: default;
 }
 
 ul {
@@ -298,9 +281,6 @@ ul {
 
 li {
 	list-style: none;
-	border: 1px solid black;
-	border-radius: var(--border-radius);
-	padding: 1rem;
 }
 
 .grain {
@@ -367,5 +347,96 @@ li {
 	}
 	to {
 		transform: translate3d(-7rem, 0, 0);
+	}
+}
+
+/* SCROLL ANIMATION */
+
+.scroll-text {
+	-moz-transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	transform: translateX(50%);
+
+	-moz-animation: my-animation 30s linear infinite;
+	-webkit-animation: my-animation 30s linear infinite;
+	animation: my-animation 30s linear infinite;
+}
+
+.scroll-container {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 55px;
+	overflow: hidden;
+	width: 80%;
+}
+
+.activity-feed {
+	height: 55px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background: black;
+	width: 100%;
+}
+
+.activity-feed h2 {
+	position: fixed;
+	min-width: 20%;
+	bottom: 0;
+	left: 0;
+	color: white;
+	z-index: 2;
+}
+
+.activity-feed ul {
+	display: flex;
+	align-items: center;
+	gap: 20rem;
+	background: black;
+	width: 150%;
+	height: 55px;
+	/* list-style-image: url(); */
+}
+
+.activity-feed ul li {
+	list-style: circle;
+	font-size: 1rem;
+	background: black;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+	from {
+		-moz-transform: translateX(100%);
+	}
+	to {
+		-moz-transform: translateX(-100%);
+	}
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+	from {
+		-webkit-transform: translateX(100%);
+	}
+	to {
+		-webkit-transform: translateX(-100%);
+	}
+}
+
+@keyframes my-animation {
+	from {
+		-moz-transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	to {
+		-moz-transform: translateX(-100%);
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
 	}
 }
