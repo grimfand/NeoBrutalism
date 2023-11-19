@@ -165,8 +165,12 @@ h2 {
 	flex-direction: column;
 	border: 2px solid black;
 	border-radius: 0 1vmax 1vmax 0;
-	background-color: var(--clr-black-100);
+	background-color: var(--clr-black-200);
 	box-shadow: -10px 10px;
+}
+
+.personal-bests h2 {
+	text-decoration: underline;
 }
 
 .personal-bests ul {
@@ -178,7 +182,7 @@ h2 {
 	background-color: rgb(253, 55, 177);
 	border-radius: 0 10vmax 10vmax 0;
 	box-shadow: -3px 3px;
-	padding: 0.5rem;
+	padding: 0.5rem 1rem;
 }
 
 .personal-bests ul li:hover {
@@ -196,8 +200,12 @@ h2 {
 	flex-direction: column;
 	border: 2px solid black;
 	border-radius: 1vmax 0 0 1vmax;
-	background-color: var(--clr-black-100);
+	background-color: var(--clr-black-200);
 	box-shadow: 10px 10px;
+}
+
+.challenges h2 {
+	text-decoration: underline;
 }
 
 .challenges ul {
@@ -209,7 +217,7 @@ h2 {
 	background-color: rgb(253, 184, 55);
 	border-radius: 10vmax 0 0 10vmax;
 	box-shadow: 3px 3px;
-	padding: 0.5rem;
+	padding: 0.5rem 1rem;
 }
 
 .challenges ul li:hover {
@@ -226,8 +234,52 @@ h2 {
 	flex-direction: column;
 	border: 2px solid black;
 	border-radius: 0 1vmax 1vmax 0;
-	background-color: var(--clr-black-100);
+	background-color: var(--clr-black-200);
 	box-shadow: -10px 10px;
+}
+
+.calories h2 {
+	text-decoration: underline;
+}
+
+.calories-container {
+	display: flex;
+	gap: 0.5rem;
+	padding: 1rem;
+}
+
+.calories-item {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	border: 2px solid black;
+	border-radius: var(--border-radius);
+}
+
+.calories-item p {
+	border: 1px solid black;
+	width: fit-content;
+	padding: 0.5rem;
+	border-radius: var(--border-radius);
+	margin-top: 0.5rem;
+	margin-inline: auto;
+	box-shadow: -3px 3px;
+}
+
+.calories-item:hover p {
+	box-shadow: -5px 5px;
+}
+
+.calories-item:first-child p {
+	background: rgb(180, 180, 255);
+}
+
+.calories-item:nth-child(2) p {
+	background: rgb(127, 127, 255);
+}
+
+.calories-item:nth-child(3) p {
+	background: rgb(86, 86, 250);
 }
 
 .card {
@@ -377,6 +429,7 @@ li {
 	height: 55px;
 	overflow: hidden;
 	width: 80%;
+	background: var(--clr-black-300);
 }
 
 .activity-feed {
@@ -384,7 +437,7 @@ li {
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	background: black;
+	background: purple;
 	width: 100%;
 }
 
@@ -401,7 +454,7 @@ li {
 	display: flex;
 	align-items: center;
 	gap: 20rem;
-	background: black;
+	background: var(--clr-black-300);
 	width: 250%;
 	height: 55px;
 	/* list-style-image: url(); */
@@ -409,10 +462,13 @@ li {
 
 .activity-feed ul li {
 	font-size: 1rem;
+	font-weight: bold;
 	background: white;
 	color: black;
 	padding: 0.5rem;
 	margin: 0;
+	border: 1px solid black;
+	box-shadow: 3px 3px;
 }
 
 /* for Firefox */
